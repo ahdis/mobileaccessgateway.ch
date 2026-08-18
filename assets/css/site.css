@@ -35,7 +35,7 @@
   --font: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --max-width: 1500px;
   --gutter: 6vw;                 /* mobile; 5vw from the breakpoint up */
-  --header-pad-y: 23.4px;
+  --header-pad-y: 25px;   /* gives the original's 182px mobile header */
 
   --fs-h1: 20.32px;  --fs-h2: 32.2px;  --fs-h3: 23.56px;
   --fs-body: 17.08px; --fs-nav: 16px;  --fs-button: 14.99px;
@@ -103,6 +103,7 @@ p:last-child { margin-bottom: 0; }
   max-width: var(--max-width); margin: 0 auto; padding-inline: var(--gutter);
   display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
 }
+.header__logo { position: relative; z-index: 12; }   /* stays above the open overlay */
 .header__logo img { width: 220px; max-width: 56.4vw; }
 .header__nav ul {
   list-style: none; display: flex; gap: 2.34vw; margin: 0; padding: 0;
@@ -112,30 +113,38 @@ p:last-child { margin-bottom: 0; }
   text-decoration: none; line-height: 1.5;
 }
 .header__nav a:hover { opacity: .7; }
+/* The original uses Squarespace's "plus" menu icon (header-menu-icon-plus),
+   which rotates into a cross when the overlay opens -- not a hamburger. */
 .header__burger {
-  display: none; background: none; border: 0; padding: .5rem; cursor: pointer;
-  width: 44px; height: 44px;
+  display: none; background: none; border: 0; padding: 0; cursor: pointer;
+  width: 44px; height: 44px; position: relative;
+  transition: transform .3s ease;
 }
 .header__burger span {
-  display: block; height: 2px; background: var(--slate); margin: 5px 0;
-  transition: transform .25s ease, opacity .25s ease;
+  position: absolute; left: 50%; top: 50%; background: var(--slate);
+  transform: translate(-50%, -50%);
 }
+.header__burger span:nth-child(1) { width: 22px; height: 2px; }
+.header__burger span:nth-child(2) { width: 2px; height: 22px; }
 
 @media (max-width: 767px) {
   .header__burger { display: block; }
   .header__nav {
     position: fixed; inset: 0; background: var(--chartreuse);
     display: flex; align-items: center; justify-content: center;
+    padding-top: 182px;          /* centre below the header, as the original does */
     transform: translateX(100%); transition: transform .3s ease;
     visibility: hidden;
   }
   .header__nav[data-open='true'] { transform: none; visibility: visible; }
-  .header__nav ul { flex-direction: column; gap: 1.6rem; text-align: center; }
-  .header__nav a { color: var(--slate); font-size: 1.4rem; }
+  .header__nav ul { flex-direction: column; gap: 23.4px; text-align: center; }
+  .header__nav a {
+    display: inline-block;
+    color: var(--olive); font-size: 33.15px; line-height: 1; font-weight: 500;
+  }
+  .header__nav li { line-height: 1; }
   body[data-nav-open='true'] { overflow: hidden; }
-  body[data-nav-open='true'] .header__burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  body[data-nav-open='true'] .header__burger span:nth-child(2) { opacity: 0; }
-  body[data-nav-open='true'] .header__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  body[data-nav-open='true'] .header__burger { transform: rotate(45deg); }
   .header__burger { position: relative; z-index: 12; }
 }
 
@@ -178,8 +187,8 @@ p:last-child { margin-bottom: 0; }
 .hero__lede { font-size: var(--fs-h1); line-height: 1.378; margin-bottom: 32px; }
 .hero__lede:last-of-type { margin-bottom: 0; }
 .hero__cta, .hero__cta:last-child { margin: 17px 0; }
-.hero__lede a { color: var(--chartreuse); text-decoration: none; }
-.hero__lede a:hover { text-decoration: underline; }
+.hero__lede a { color: var(--chartreuse); text-decoration: underline; }
+.hero__lede a:hover { text-decoration: none; }
 
 /* --- "In A Nutshell" -----------------------------------------------------
    The original is a Fluid Engine grid of 26 tracks: one gutter track, 24

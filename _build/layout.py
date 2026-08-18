@@ -40,7 +40,7 @@ def header(active=""):
       </a>
       <button class="header__burger" type="button" aria-expanded="false"
               aria-controls="site-nav" aria-label="Open menu">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
       <nav class="header__nav" id="site-nav" aria-label="Main">
         <ul>
