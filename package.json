@@ -1,0 +1,12 @@
+{
+  "name": "mobileaccessgateway.ch",
+  "private": true,
+  "description": "Static site for www.mobileaccessgateway.ch",
+  "license": "Apache-2.0",
+  "devDependencies": { "playwright": "^1.62.1" },
+  "scripts": {
+    "archive": "./_reference/archive.sh",
+    "tokens": "node _design/tools/extract-tokens.mjs && node _design/tools/extract-scale.mjs && python3 _design/tools/extract-grid.py",
+    "serve": "python3 -m http.server 8080"
+  }
+}

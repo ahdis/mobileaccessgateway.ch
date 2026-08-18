@@ -1,0 +1,337 @@
+{
+  "backgrounds": {
+    "390": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 390
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 390
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 390
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 390
+      }
+    ],
+    "480": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 480
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 480
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 480
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 480
+      }
+    ],
+    "768": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 768
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 768
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 768
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 768
+      }
+    ],
+    "1024": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 1024
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 1024
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 1024
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 1024
+      }
+    ],
+    "1280": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 1280
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 1280
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 1280
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 1280
+      }
+    ],
+    "1440": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 1440
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 1440
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 1440
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 1440
+      }
+    ],
+    "1920": [
+      {
+        "i": 0,
+        "theme": "bright",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(106, 132, 77)",
+        "hasImage": false,
+        "contentWidth": 1920
+      },
+      {
+        "i": 1,
+        "theme": "white-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(255, 255, 255)",
+        "hasImage": false,
+        "contentWidth": 1920
+      },
+      {
+        "i": 2,
+        "theme": "light-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(215, 227, 85)",
+        "hasImage": false,
+        "contentWidth": 1920
+      },
+      {
+        "i": 3,
+        "theme": "dark-bold",
+        "sectionBg": "rgba(0, 0, 0, 0)",
+        "innerBg": "rgb(61, 92, 115)",
+        "hasImage": false,
+        "contentWidth": 1920
+      }
+    ]
+  },
+  "scale": {
+    "390": {
+      "h1": 20.32,
+      "h2": 32.2,
+      "h3": 23.56,
+      "p": 17.08,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.92
+    },
+    "480": {
+      "h1": 20.32,
+      "h2": 32.2,
+      "h3": 23.56,
+      "p": 17.08,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.92
+    },
+    "768": {
+      "h1": 19.6864,
+      "h2": 29.824,
+      "h3": 22.4512,
+      "p": 16.9216,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.4
+    },
+    "1024": {
+      "h1": 20.9152,
+      "h2": 34.432,
+      "h3": 24.6016,
+      "p": 17.2288,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.4
+    },
+    "1280": {
+      "h1": 22.144,
+      "h2": 39.04,
+      "h3": 26.752,
+      "p": 17.536,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.4
+    },
+    "1440": {
+      "h1": 22.912,
+      "h2": 41.92,
+      "h3": 28.096,
+      "p": 17.728,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 14.272
+    },
+    "1920": {
+      "h1": 25.216,
+      "h2": 50.56,
+      "h3": 32.128,
+      "p": 18.304,
+      ".header-nav-item a": 16,
+      ".sqs-block-button-element": 13.696
+    }
+  },
+  "gutters": {
+    "390": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "480": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "768": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "1024": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "1280": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "1440": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    },
+    "1920": {
+      "--sqs-site-max-width": "1920px",
+      "--sqs-site-gutter": "5vw",
+      "--sqs-mobile-site-gutter": "6vw"
+    }
+  }
+}

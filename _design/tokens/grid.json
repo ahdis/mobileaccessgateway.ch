@@ -1,0 +1,227 @@
+{
+  "contact": {
+    "mobile": {
+      "fe-block-f6494d0d7b3ae98507e9": {
+        "area": "1/2/7/10",
+        "justify": "flex-start"
+      },
+      "fe-block-40abe269cea359698c92": {
+        "area": "7/2/9/10",
+        "justify": "center"
+      },
+      "fe-block-f65857e7a9f138954525": {
+        "area": "9/2/23/10",
+        "justify": "flex-start"
+      },
+      "fe-block-d8c85f6c0ad4c7c13a91": {
+        "area": "1/2/13/10",
+        "justify": "center"
+      }
+    },
+    "desktop": {
+      "fe-block-f6494d0d7b3ae98507e9": {
+        "area": "1/2/7/12",
+        "justify": "flex-start"
+      },
+      "fe-block-40abe269cea359698c92": {
+        "area": "7/2/8/12",
+        "justify": "center"
+      },
+      "fe-block-f65857e7a9f138954525": {
+        "area": "1/14/12/26",
+        "justify": "flex-start"
+      },
+      "fe-block-d8c85f6c0ad4c7c13a91": {
+        "area": "2/3/4/25",
+        "justify": "center"
+      }
+    },
+    "mobileGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(8, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 22,
+      "rowGap": "11.0px",
+      "colGap": "11.0px"
+    },
+    "desktopGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(24, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 11
+    }
+  },
+  "contributors": {
+    "mobile": {},
+    "desktop": {},
+    "mobileGrid": {
+      "rowGap": "var(--social-icons-gap, 12px)",
+      "colGap": "var(--social-icons-gap, 12px)"
+    },
+    "desktopGrid": {}
+  },
+  "index": {
+    "mobile": {
+      "fe-block-6b782dea323b937f5398": {
+        "area": "1/2/3/10",
+        "justify": "flex-start"
+      },
+      "fe-block-yui_3_17_2_1_1676386896622_3147": {
+        "area": "4/2/10/10",
+        "justify": "center"
+      },
+      "fe-block-a586f7ed74db474067b2": {
+        "area": "11/2/13/10",
+        "justify": "flex-start"
+      },
+      "fe-block-210b0b9e3781e201c3bb": {
+        "area": "13/2/29/10",
+        "justify": "flex-start"
+      },
+      "fe-block-2106ea06ef0be54a3b96": {
+        "area": "30/2/32/10",
+        "justify": "center"
+      },
+      "fe-block-yui_3_17_2_1_1675932120595_166035": {
+        "area": "33/2/34/10",
+        "justify": "center"
+      },
+      "fe-block-df0533a8d475de233e75": {
+        "area": "35/2/41/10",
+        "justify": "center"
+      },
+      "fe-block-b511d91f4286d1744c41": {
+        "area": "42/2/44/10",
+        "justify": "flex-start"
+      },
+      "fe-block-2b555b9f7b515603252c": {
+        "area": "44/2/64/10",
+        "justify": "flex-start"
+      },
+      "fe-block-90b7d4cc6e088e1df781": {
+        "area": "64/2/66/10",
+        "justify": "center"
+      },
+      "fe-block-05ec6c2d85f15922a6d8": {
+        "area": "67/2/68/10",
+        "justify": "center"
+      },
+      "fe-block-203a9f27f67757193046": {
+        "area": "69/2/75/10",
+        "justify": "center"
+      },
+      "fe-block-b6ff340f578de7e2ad64": {
+        "area": "76/2/79/10",
+        "justify": "flex-start"
+      },
+      "fe-block-99db9fa3f3840c6d2bbf": {
+        "area": "79/2/102/10",
+        "justify": "flex-start"
+      },
+      "fe-block-4b65d0bc51b2b3731976": {
+        "area": "102/2/104/10",
+        "justify": "center"
+      }
+    },
+    "desktop": {
+      "fe-block-6b782dea323b937f5398": {
+        "area": "2/10/4/18",
+        "justify": "flex-start"
+      },
+      "fe-block-yui_3_17_2_1_1676386896622_3147": {
+        "area": "6/9/16/13",
+        "justify": "flex-start"
+      },
+      "fe-block-a586f7ed74db474067b2": {
+        "area": "5/14/7/22",
+        "justify": "flex-start"
+      },
+      "fe-block-210b0b9e3781e201c3bb": {
+        "area": "7/14/17/23",
+        "justify": "flex-start"
+      },
+      "fe-block-2106ea06ef0be54a3b96": {
+        "area": "17/14/19/18",
+        "justify": "center"
+      },
+      "fe-block-yui_3_17_2_1_1675932120595_166035": {
+        "area": "19/5/20/23",
+        "justify": "center"
+      },
+      "fe-block-df0533a8d475de233e75": {
+        "area": "21/15/33/19",
+        "justify": "flex-start"
+      },
+      "fe-block-b511d91f4286d1744c41": {
+        "area": "20/5/22/13",
+        "justify": "flex-start"
+      },
+      "fe-block-2b555b9f7b515603252c": {
+        "area": "22/5/32/14",
+        "justify": "flex-start"
+      },
+      "fe-block-90b7d4cc6e088e1df781": {
+        "area": "32/5/34/9",
+        "justify": "center"
+      },
+      "fe-block-05ec6c2d85f15922a6d8": {
+        "area": "34/5/35/23",
+        "justify": "center"
+      },
+      "fe-block-203a9f27f67757193046": {
+        "area": "37/9/53/13",
+        "justify": "flex-start"
+      },
+      "fe-block-b6ff340f578de7e2ad64": {
+        "area": "36/14/38/22",
+        "justify": "flex-start"
+      },
+      "fe-block-99db9fa3f3840c6d2bbf": {
+        "area": "38/14/51/23",
+        "justify": "flex-start"
+      },
+      "fe-block-4b65d0bc51b2b3731976": {
+        "area": "51/14/53/18",
+        "justify": "center"
+      }
+    },
+    "mobileGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(8, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 104,
+      "rowGap": "2.0px",
+      "colGap": "7.0px"
+    },
+    "desktopGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(24, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 53
+    }
+  },
+  "privacy-policy": {
+    "mobile": {
+      "fe-block-759a32ebd72149ad5e3c": {
+        "area": "2/2/4/10",
+        "justify": "flex-start"
+      },
+      "fe-block-fe48c7d45e7e04dc6d15": {
+        "area": "4/2/52/10",
+        "justify": "flex-start"
+      }
+    },
+    "desktop": {
+      "fe-block-759a32ebd72149ad5e3c": {
+        "area": "1/5/3/13",
+        "justify": "flex-start"
+      },
+      "fe-block-fe48c7d45e7e04dc6d15": {
+        "area": "1/13/96/24",
+        "justify": "flex-start"
+      }
+    },
+    "mobileGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(8, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 51,
+      "rowGap": "11.0px",
+      "colGap": "11.0px"
+    },
+    "desktopGrid": {
+      "cols": "minmax(var(--grid-gutter), 1fr) repeat(24, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr)",
+      "rows": 95
+    }
+  }
+}
