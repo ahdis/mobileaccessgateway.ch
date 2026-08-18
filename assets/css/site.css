@@ -305,13 +305,11 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Contact */
-.contact { padding-top: 288px; padding-bottom: 95px; }
+.contact { padding-top: 238px; padding-bottom: 95px; }
 .contact__grid { display: grid; gap: 3rem; }
 .contact__title { font-size: var(--fs-h2); line-height: 1.316; margin-bottom: 1rem; }
 .contact__lede { font-size: var(--fs-h1); line-height: 1.378; margin-bottom: 24px; }
-.contact__social { display: flex; gap: 1rem; margin-top: 24px; }
-.contact__social a { display: inline-flex; width: 22px; height: 22px; }
-.contact__social svg { width: 100%; height: 100%; fill: currentColor; }
+.contact__social { display: flex; gap: 8px; margin-top: 24px; }
 .address { font-style: normal; line-height: 1.5; }
 @media (min-width: 768px) {
   .contact__grid { grid-template-columns: 534px 1fr; gap: 119px; }
@@ -358,9 +356,7 @@ p:last-child { margin-bottom: 0; }
 .footer__logo img { width: 100%; }
 .footer__nav ul { list-style: none; margin: 0 0 1.1rem; padding: 0; display: grid; gap: .35rem; }
 .footer__nav ul:last-child { margin-bottom: 0; }
-.footer__social { display: flex; gap: 1rem; margin-top: 0; height: 62px; align-items: center; }
-.footer__social a { display: inline-flex; width: 28px; height: 28px; }
-.footer__social svg { width: 100%; height: 100%; fill: currentColor; }
+.footer__social { display: flex; gap: 8px; margin-top: 0; height: 62px; align-items: center; }
 .footer__legal { margin-top: 2.5rem; font-size: .92em; opacity: .9;
   display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
 @media (min-width: 768px) {
@@ -370,6 +366,17 @@ p:last-child { margin-bottom: 0; }
   .footer__grid { grid-template-columns: 23.07% 23.07%; justify-content: space-between; gap: 0; }
   .footer__logo img { width: 77px; }
 }
+
+/* Social icons: 28px circles with the glyph inside, as in the original. */
+.contact__social a, .footer__social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; flex: 0 0 28px;
+  border: 1.5px solid currentColor; border-radius: 50%;
+}
+.contact__social svg, .footer__social svg {
+  width: 58%; height: 58%; fill: currentColor;
+}
+.contact__social a:hover, .footer__social a:hover { opacity: .75; }
 
 /* --- Cookie consent banner (replaces the Squarespace one; colours from the
        original custom.css) --------------------------------------------- */
