@@ -31,7 +31,11 @@ while read -r url; do
     *images.squarespace-cdn.com*) q="?format=2500w"; dir="$OUT/assets" ;;
     *)                            q="";             dir="$OUT/fonts"  ;;
   esac
-  code=$(curl -sSL -o "$dir/$fn" -w '%{http_code}' "$url$q")
+  # Without an explicit Accept the CDN content-negotiates and may return WebP
+  # under a .png name -- which made the archive non-deterministic between runs.
+  # Ask for the source format so the archive holds true originals.
+  code=$(curl -sSL -H 'Accept: image/png,image/gif,image/jpeg,*/*;q=0.5' \
+           -o "$dir/$fn" -w '%{http_code}' "$url$q")
   printf '  %s %9s  %s\n' "$code" "$(wc -c < "$dir/$fn" | tr -d ' ')" "${dir##*/}/$fn"
 done < "$OUT/assets/SOURCES.txt"
 

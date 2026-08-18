@@ -1,0 +1,328 @@
+/* ==========================================================================
+   www.mobileaccessgateway.ch
+   Rebuilt from the original Squarespace 7.1 site. All values are measured,
+   not guessed -- see _design/DESIGN-NOTES.md and _design/GRID.md.
+   ========================================================================== */
+
+/* --- Fonts: the original's own Poppins files, self-hosted ---------------- */
+@font-face { font-family: Poppins; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(../fonts/poppins-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(../fonts/poppins-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 500; font-display: swap;
+  src: url(../fonts/poppins-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 500; font-display: swap;
+  src: url(../fonts/poppins-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 700; font-display: swap;
+  src: url(../fonts/poppins-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 700; font-display: swap;
+  src: url(../fonts/poppins-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+/* --- Tokens (see _design/tokens.css) ------------------------------------ */
+:root {
+  --olive:      hsl(88.36 26.32% 40.98%);   /* rgb(106,132,77)  */
+  --lime:       hsl(70.22 63.98% 41.37%);   /* rgb(150,173,38)  */
+  --chartreuse: hsl(65.07 71.72% 61.18%);   /* rgb(215,227,85)  */
+  --slate:      hsl(205.56 30.68% 34.51%);  /* rgb(61,92,115)   */
+  --white:      #fff;
+
+  --font: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --max-width: 1500px;
+  --gutter: 6vw;                 /* mobile; 5vw from the breakpoint up */
+  --header-pad-y: 23.4px;
+
+  --fs-h1: 20.32px;  --fs-h2: 32.2px;  --fs-h3: 23.56px;
+  --fs-body: 17.08px; --fs-nav: 16px;  --fs-button: 14.99px;
+}
+@media (min-width: 768px) {
+  :root {
+    --gutter: 5vw;
+    --header-pad-y: 2.7vw;
+    --fs-h1: calc(16px + 0.48vw);
+    --fs-h2: calc(16px + 1.80vw);
+    --fs-h3: calc(16px + 0.84vw);
+    --fs-body: calc(16px + 0.12vw);
+    --fs-button: 14.27px;
+  }
+}
+
+/* --- Base --------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; font-family: var(--font); font-size: var(--fs-body); font-weight: 400;
+  line-height: 1.5; color: var(--lime); background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 { font-weight: 500; margin: 0; }
+h1 { font-size: var(--fs-h1); line-height: 1.378; }
+h2 { font-size: var(--fs-h2); line-height: 1.316; color: var(--olive); }
+h3 { font-size: var(--fs-h3); line-height: 1.361; color: var(--olive); }
+p  { margin: 0 0 1.2em; }
+p:last-child { margin-bottom: 0; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--white); color: var(--olive); padding: .75rem 1.25rem;
+}
+.skip-link:focus { left: 0; }
+
+.wrap { max-width: var(--max-width); margin: 0 auto; padding-inline: var(--gutter); }
+
+/* --- Buttons ------------------------------------------------------------ */
+.button {
+  display: inline-block; text-decoration: none; font-weight: 500;
+  font-size: var(--fs-button); letter-spacing: .02em; line-height: 1.4;
+  padding: .9em 1.5em; border-radius: 6.4px; transition: opacity .15s ease;
+  background: var(--white); color: var(--olive);
+}
+.button:hover { opacity: .82; }
+.button--olive { background: var(--olive); color: var(--white); }
+.button--slate { background: var(--slate); color: var(--white); }
+
+/* --- Header: absolute over the hero, on its own solid chartreuse band
+       (the original paints this with div.header-background-solid) --------- */
+.header {
+  position: absolute; inset: 0 0 auto 0; z-index: 10;
+  padding-block: var(--header-pad-y);
+  background: var(--chartreuse);
+}
+.header__inner {
+  max-width: var(--max-width); margin: 0 auto; padding-inline: var(--gutter);
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.header__logo img { width: 220px; max-width: 56.4vw; }
+.header__nav ul {
+  list-style: none; display: flex; gap: 2.34vw; margin: 0; padding: 0;
+}
+.header__nav a {
+  font-size: var(--fs-nav); font-weight: 500; color: var(--slate);
+  text-decoration: none; line-height: 1.5;
+}
+.header__nav a:hover { opacity: .7; }
+.header__burger {
+  display: none; background: none; border: 0; padding: .5rem; cursor: pointer;
+  width: 44px; height: 44px;
+}
+.header__burger span {
+  display: block; height: 2px; background: var(--slate); margin: 5px 0;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+@media (max-width: 767px) {
+  .header__burger { display: block; }
+  .header__nav {
+    position: fixed; inset: 0; background: var(--chartreuse);
+    display: flex; align-items: center; justify-content: center;
+    transform: translateX(100%); transition: transform .3s ease;
+    visibility: hidden;
+  }
+  .header__nav[data-open='true'] { transform: none; visibility: visible; }
+  .header__nav ul { flex-direction: column; gap: 1.6rem; text-align: center; }
+  .header__nav a { color: var(--slate); font-size: 1.4rem; }
+  body[data-nav-open='true'] { overflow: hidden; }
+  body[data-nav-open='true'] .header__burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  body[data-nav-open='true'] .header__burger span:nth-child(2) { opacity: 0; }
+  body[data-nav-open='true'] .header__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .header__burger { position: relative; z-index: 12; }
+}
+
+/* --- Section themes -----------------------------------------------------
+   Section padding is set per section from measurements of the original
+   rather than a uniform rhythm -- the original derives it from Fluid Engine
+   row spans, which do not reduce to a single value. --------------------- */
+.section { padding-block: 0; }
+.section--bright { background: var(--olive); color: var(--white); }
+.section--white  { background: var(--white); color: var(--lime); }
+.section--light  { background: var(--chartreuse); color: var(--olive); padding: 264px 0 25px; }
+.section--dark   { background: var(--slate); color: var(--white); }
+.section--bright h1, .section--bright h2, .section--bright h3,
+.section--dark h1, .section--dark h2, .section--dark h3 { color: inherit; }
+.section--light h2, .section--light h3 { color: var(--olive); }
+
+/* --- Hero --------------------------------------------------------------- */
+.hero { padding: 252px 0 45px; }
+.hero__inner { display: flex; flex-direction: column; gap: 17px; }
+.hero__media img { width: 100%; border-radius: 50%; }
+
+@media (min-width: 768px) {
+  .header__logo img { width: 192px; max-width: none; }
+  .hero { padding: 240px 0 47px; }
+  .hero__inner {
+    flex-direction: row; align-items: flex-start; gap: 83px;
+    max-width: 1006px; margin-inline: auto; padding-inline: 0;
+  }
+  /* the original insets the image inside its taller block */
+  .hero__media { flex: 0 0 252px; margin-top: 27px; }
+  /* the original insets the image inside its 252px block (218px of 252) */
+  .hero__media img { width: 86.5%; margin-inline: auto; }
+  /* the original's text block is inset 17px inside its 671px column */
+  .hero__body  { flex: 1 1 auto; padding-inline: 17px; }
+}
+
+/* Hero copy: the original marks these as <h1>, so they render at h1 size, not
+   body size. Rebuilt as paragraphs with one visually-hidden <h1> -- same
+   pixels, sane document outline. */
+.hero__lede { font-size: var(--fs-h1); line-height: 1.378; margin-bottom: 32px; }
+.hero__lede:last-of-type { margin-bottom: 0; }
+.hero__cta, .hero__cta:last-child { margin: 17px 0; }
+.hero__lede a { color: var(--chartreuse); text-decoration: none; }
+.hero__lede a:hover { text-decoration: underline; }
+
+/* --- "In A Nutshell" -----------------------------------------------------
+   The original is a Fluid Engine grid of 26 tracks: one gutter track, 24
+   content columns, one gutter track. Reproducing that track list means the
+   grid-area line numbers in _design/GRID.md can be used verbatim -- no
+   off-by-one arithmetic. Mobile collapses to a single column, with source
+   order = mobile order (image always first). ------------------------------- */
+.nutshell__title { text-align: center; }
+
+.feature, .grid-row, .nutshell__head {
+  display: grid; gap: 0; margin-block: 0;
+  padding-inline: var(--gutter);
+}
+/* Mobile gaps below are the ones measured on the original, where they come
+   from Fluid Engine row spans rather than margins. */
+.nutshell { padding: 20px 0 16px; }
+.nutshell__head   { margin-bottom: 37px; }
+.nutshell__title  { margin-bottom: 0; }
+.feature__heading { margin-top: 28px; }
+.feature__prose   { margin-top: 21px; }
+.feature__cta     { margin-top: 29px; }
+/* On mobile the original's second feature leaves a larger gap before its
+   button: its prose does not fill the rows the grid allots it. */
+.feature--image-right .feature__cta { margin-top: 96px; }
+.feature__prose p { margin-bottom: 0; }
+.feature__prose > * + * { margin-top: 16px; }
+.feature__media img { width: 45%; max-width: 100%; margin-inline: auto; border-radius: 50%; }
+
+.rule { border: 0; border-top: 1px solid currentColor; opacity: .35; margin: 0; }
+.grid-row { margin-block: 29px 40px; }
+
+@media (min-width: 768px) {
+  .feature, .grid-row, .nutshell__head {
+    --grid-gutter: calc(5vw - 7px);
+    --cell-max-width: calc((var(--max-width) - 7px * 23) / 24);
+    grid-template-columns:
+      minmax(var(--grid-gutter), 1fr)
+      repeat(24, minmax(0, var(--cell-max-width)))
+      minmax(var(--grid-gutter), 1fr);
+    column-gap: 7px; row-gap: 0; align-items: start;
+    max-width: var(--max-width); margin-inline: auto;
+    padding-inline: 0;   /* the gutter tracks handle inset above the breakpoint */
+  }
+  /* Column spans copied verbatim from _design/GRID.md. Each of heading,
+     prose and button has its own span in the original. */
+  .feature__media img { width: 100%; }
+  .feature--image-left  .feature__media   { grid-column:  9 / 13; grid-row: 2 / 4; }
+  .feature--image-left  .feature__heading { grid-column: 14 / 22; grid-row: 1; }
+  .feature--image-left  .feature__prose   { grid-column: 14 / 23; grid-row: 2; }
+  .feature--image-left  .feature__cta     { grid-column: 14 / 18; grid-row: 3; }
+
+  .feature--image-right .feature__media   { grid-column: 15 / 19; grid-row: 2 / 4; }
+  .feature--image-right .feature__heading { grid-column:  5 / 13; grid-row: 1; }
+  .feature--image-right .feature__prose   { grid-column:  5 / 14; grid-row: 2; }
+  .feature--image-right .feature__cta     { grid-column:  5 /  9; grid-row: 3; }
+
+  .grid-row .rule { grid-column: 5 / 23; }
+  .nutshell__head .nutshell__title { grid-column: 10 / 18; }
+  .nutshell { padding: 102px 0 58px; }
+  .nutshell__head   { margin-bottom: 26px; }
+  .feature__heading { margin-top: 0; }
+  .feature__cta, .feature--image-right .feature__cta { margin-top: 8px; }
+  .grid-row         { margin-block: 8px 21px; }
+  /* the original's row grid leaves a larger gap before the third feature */
+  .nutshell .feature:last-of-type { margin-top: 40px; }
+  .section--light { padding: 143px 0 31px; }
+}
+
+/* --- Simple content pages (contributors, contact, privacy) -------------- */
+.page { padding-block: 6rem 4rem; }
+.page__title { margin-bottom: 2rem; }
+.prose { max-width: 46rem; }
+.prose h2 { margin-top: 2.5rem; margin-bottom: .8rem; }
+.prose h3 { margin-top: 2rem; margin-bottom: .6rem; }
+.prose ul { padding-left: 1.2em; }
+.prose li { margin-bottom: .4em; }
+.prose a { color: inherit; }
+.prose .lead { font-weight: 500; color: var(--olive); margin-top: 1.6em; }
+.prose em { font-style: italic; }
+
+/* Three columns on desktop, media-first, matching the original list block. */
+.contributor-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 3rem 20px;
+}
+.contributor { display: flex; flex-direction: column; gap: 1.2rem; }
+.contributor__logo img { width: 100%; max-width: 260px; }
+.contributor__body > * + * { margin-top: .9rem; }
+.contributor__body .button { align-self: start; margin-top: 1.4rem; }
+.contributor__body { display: flex; flex-direction: column; flex: 1; }
+.contributor__body .button { margin-top: auto; }
+@media (min-width: 768px) {
+  .contributor-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+.contact-grid { display: grid; gap: 3rem; }
+@media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 5vw; } }
+.address { font-style: normal; line-height: 1.885; margin-top: 14px; }
+
+/* --- Footer -------------------------------------------------------------
+   The original insets the footer less than the page gutter: content runs
+   55px..1386px at 1440 wide, and 6px..383px at 390. ---------------------- */
+.footer { background: var(--slate); color: var(--white); padding: 7px var(--gutter); }
+.footer a { color: inherit; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer__grid { display: grid; gap: 2.5rem; max-width: none; padding-inline: 0; }
+.footer__logo { display: block; }
+.footer__logo img { width: 100%; }
+.footer__nav ul { list-style: none; margin: 0 0 1.1rem; padding: 0; display: grid; gap: .35rem; }
+.footer__nav ul:last-child { margin-bottom: 0; }
+.footer__social { display: flex; gap: 1rem; margin-top: 0; height: 62px; align-items: center; }
+.footer__social a { display: inline-flex; width: 28px; height: 28px; }
+.footer__social svg { width: 100%; height: 100%; fill: currentColor; }
+.footer__legal { margin-top: 2.5rem; font-size: .92em; opacity: .9;
+  display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+@media (min-width: 768px) {
+  .footer { padding-block: 19px; }
+  /* left and right columns are each 299/1296 of the content width, flush to
+     the outer edges (measured on the original) */
+  .footer__grid { grid-template-columns: 23.07% 23.07%; justify-content: space-between; gap: 0; }
+  .footer__logo img { width: 77px; }
+}
+
+/* --- Cookie consent banner (replaces the Squarespace one; colours from the
+       original custom.css) --------------------------------------------- */
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  background: #445c71; color: #fff; padding: 1.1rem var(--gutter);
+  display: none; gap: 1rem 2rem; align-items: center; flex-wrap: wrap;
+  font-size: .95rem; line-height: 1.5;
+}
+.consent[data-visible='true'] { display: flex; }
+.consent p { margin: 0; flex: 1 1 22rem; }
+.consent a { color: #fff; }
+.consent__actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+.consent button {
+  font: inherit; font-weight: 500; cursor: pointer; border: 0;
+  border-radius: 5px; padding: .6em 1.3em; background: #fff; color: #445c71;
+  transition: background .15s ease, color .15s ease;
+}
+.consent__accept:hover { background: #dae16c; color: #2c3d4c; }
+.consent__deny:hover   { background: #db7c33; color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
