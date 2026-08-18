@@ -3,7 +3,8 @@
 Output is plain HTML that GitHub Pages serves as-is (no Jekyll, no Actions)."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from layout import page, social_row
+from layout import page, social_row, rel
+import re as _re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -202,6 +203,12 @@ privacy_body = f"""  <section class="section section--bright privacy">
   </section>"""
 
 # --------------------------------------------------------------------------
+def localize(html, base):
+    """Rewrite site-root href/src in a page body to be relative to that page."""
+    return _re.sub(r'(href|src|srcset)="(/[^"]*)"',
+                   lambda m: f'{m.group(1)}="{rel(m.group(2), base)}"', html)
+
+
 PAGES = [
     ('index.html', 'Mobile Access Gateway',
      'The Mobile Access Gateway is an open source FHIR-based connection to the Swiss '
@@ -218,7 +225,9 @@ PAGES = [
 ]
 
 for name, title, desc, body, active, canonical in PAGES:
-    out = page(title, desc, body, active, canonical)
+    depth = name.count('/')
+    base = '../' * depth
+    out = page(title, desc, localize(body, base), active, canonical, base=base)
     dest = os.path.join(ROOT, name)
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     open(dest, 'w', encoding='utf-8').write(out)

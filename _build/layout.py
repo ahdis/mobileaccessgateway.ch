@@ -25,17 +25,17 @@ SOCIAL = [
 ]
 
 
-def header(active=""):
+def header(active="", base=""):
     items = "\n".join(
         f'        <li><a href="{href}"'
         + (' target="_blank" rel="noopener"' if href.startswith("http") else "")
         + (' aria-current="page"' if href == active else "")
         + f">{label}</a></li>"
-        for label, href in NAV)
+        for label, href in ((l, rel(h, base)) for l, h in NAV))
     return f"""  <header class="header">
     <div class="header__inner">
-      <a class="header__logo" href="/">
-        <img src="/assets/img/mag-logo.webp" width="886" height="531"
+      <a class="header__logo" href="{base or './'}">
+        <img src="{base}assets/img/mag-logo.webp" width="886" height="531"
              alt="Mobile Access Gateway">
       </a>
       <button class="header__burger" type="button" aria-expanded="false"
@@ -51,7 +51,7 @@ def header(active=""):
   </header>"""
 
 
-def social_row(indent="          "):
+def social_row(indent="          ", base=""):
     return "\n".join(
         f'{indent}<a href="{href}" aria-label="{label}"'
         + (' target="_blank" rel="noopener"' if href.startswith("http") else "")
@@ -59,13 +59,13 @@ def social_row(indent="          "):
         for label, href, d in SOCIAL)
 
 
-def footer():
-    social = social_row()
+def footer(base=""):
+    social = social_row(base=base)
     return f"""  <footer class="footer">
     <div class="wrap footer__grid">
       <div>
         <a class="footer__logo" href="https://www.ahdis.ch/en/home" target="_blank" rel="noopener">
-          <img src="/assets/img/ahdis-logo.webp" width="600" height="176" alt="ahdis ag">
+          <img src="{base}assets/img/ahdis-logo.webp" width="600" height="176" alt="ahdis ag">
         </a>
         <address class="address">
           ahdis ag<br>c/o Impact Hub Z&uuml;rich<br>Sihlquai 131<br>8005 Z&uuml;rich<br>Switzerland
@@ -84,8 +84,8 @@ def footer():
           <li><a href="https://github.com/ahdis/MobileAccessGateway" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://ahdis.github.io/MobileAccessGateway/" target="_blank" rel="noopener">Documentation</a></li>
         </ul>
-        <ul><li><a href="/contact">Contact</a></li></ul>
-        <ul><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="{base}contact/">Contact</a></li></ul>
+        <ul><li><a href="{base}privacy-policy/">Privacy Policy</a></li></ul>
       </nav>
     </div>
   </footer>
@@ -93,7 +93,7 @@ def footer():
   <div class="consent" role="region" aria-label="Cookie notice">
     <p>We use Google Analytics to understand how this site is used. Analytics
        cookies are only set if you agree. See our
-       <a href="/privacy-policy">Privacy Policy</a>.</p>
+       <a href="{base}privacy-policy/">Privacy Policy</a>.</p>
     <div class="consent__actions">
       <button type="button" class="consent__accept">Accept</button>
       <button type="button" class="consent__deny">Decline</button>
@@ -101,7 +101,19 @@ def footer():
   </div>"""
 
 
-def page(title, description, body, active="", canonical="/", indexable=True):
+def rel(href, base):
+    """Rewrite a site-root href to one relative to the current page."""
+    if not href.startswith("/"):
+        return href
+    tail = href.lstrip("/")
+    if not tail:
+        return base or "./"
+    # a trailing slash only for directory-style paths, never for files
+    is_file = "." in tail.rsplit("/", 1)[-1]
+    return base + tail + ("" if is_file or tail.endswith("/") else "/")
+
+
+def page(title, description, body, active="", canonical="/", indexable=True, base=""):
     canon = (f'\n<link rel="canonical" href="https://www.mobileaccessgateway.ch{canonical}">'
              if indexable else '\n<meta name="robots" content="noindex">')
     return f"""<!DOCTYPE html>
@@ -121,19 +133,19 @@ def page(title, description, body, active="", canonical="/", indexable=True):
 <meta property="og:image:width" content="886">
 <meta property="og:image:height" content="531">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/poppins-400-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/poppins-500-latin.woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="{base}assets/img/favicon.ico" sizes="any">
+<link rel="preload" as="font" type="font/woff2" href="{base}assets/fonts/poppins-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{base}assets/fonts/poppins-500-latin.woff2" crossorigin>
+<link rel="stylesheet" href="{base}assets/css/site.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to Content</a>
-{header(active)}
+{header(active, base)}
 <main id="main">
 {body}
 </main>
-{footer()}
-<script src="/assets/js/site.js" defer></script>
+{footer(base)}
+<script src="{base}assets/js/site.js" defer></script>
 </body>
 </html>
 """

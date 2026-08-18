@@ -8,19 +8,21 @@ for (const path of PAGES) {
   const p = await b.newPage();
   p.on('response', r => { if (r.status() >= 400) failed.push(`${r.status()} ${r.url()}  (on ${path})`); });
   await p.goto(BASE + path, { waitUntil: 'networkidle' });
-  const hrefs = await p.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')));
-  for (const h of hrefs) {
-    if (!h || h.startsWith('#')) continue;
-    (h.startsWith('http') || h.startsWith('mailto:') ? external : internal).add(h);
+  // resolve against the page so relative hrefs are checked as the browser sees them
+  const hrefs = await p.evaluate(() => [...document.querySelectorAll('a[href]')]
+    .map(a => ({ raw: a.getAttribute('href'), abs: a.href })));
+  for (const { raw, abs } of hrefs) {
+    if (!raw || raw.startsWith('#')) continue;
+    if (raw.startsWith('mailto:') || /^https?:/.test(raw)) { external.add(raw); continue; }
+    internal.add(abs);
   }
   await p.close();
 }
-console.log('  internal links:', [...internal].sort().join('  '));
+console.log('  internal links:', [...internal].sort().map(u => u.replace(BASE,'') || '/').join('  '));
 console.log('\n  external/mailto:', external.size, 'distinct');
 // resolve internal links
 for (const h of internal) {
-  if (h.startsWith('mailto:')) continue;
-  const r = await fetch(BASE + h, { redirect: 'follow' });
+  const r = await fetch(h, { redirect: 'follow' });
   if (!r.ok) failed.push(`${r.status} ${h}`);
 }
 console.log('\n  failed requests:', failed.length ? '\n    ' + failed.join('\n    ') : 'none');
