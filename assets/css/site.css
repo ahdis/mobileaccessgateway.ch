@@ -257,36 +257,89 @@ p:last-child { margin-bottom: 0; }
   .section--light { padding: 143px 0 31px; }
 }
 
-/* --- Simple content pages (contributors, contact, privacy) -------------- */
-.page { padding-block: 6rem 4rem; }
-.page__title { margin-bottom: 2rem; }
-.prose { max-width: 46rem; }
-.prose h2 { margin-top: 2.5rem; margin-bottom: .8rem; }
-.prose h3 { margin-top: 2rem; margin-bottom: .6rem; }
-.prose ul { padding-left: 1.2em; }
-.prose li { margin-bottom: .4em; }
-.prose a { color: inherit; }
-.prose .lead { font-weight: 500; color: var(--olive); margin-top: 1.6em; }
-.prose em { font-style: italic; }
+/* --- Inner pages --------------------------------------------------------
+   Themes differ per page in the original: contributors is white with slate
+   text (bright-inverse), contact and privacy are olive with white text. ---- */
+.section--inverse { background: var(--white); color: var(--slate); }
+.section--inverse h1, .section--inverse h2, .section--inverse h3 { color: var(--slate); }
+.section--band { background: var(--white); color: var(--slate); padding-block: 49px; }
+.band__title { color: var(--slate); text-align: center; }
 
-/* Three columns on desktop, media-first, matching the original list block. */
-.contributor-list {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: 3rem 20px;
+.page { padding-top: 240px; padding-bottom: 47px; }
+.page__title {
+  font-size: var(--fs-h2); line-height: 1.5; font-weight: 500;
+  color: var(--slate); margin: 0 0 70px; text-align: center;
 }
-.contributor { display: flex; flex-direction: column; gap: 1.2rem; }
-.contributor__logo img { width: 100%; max-width: 260px; }
-.contributor__body > * + * { margin-top: .9rem; }
-.contributor__body .button { align-self: start; margin-top: 1.4rem; }
-.contributor__body { display: flex; flex-direction: column; flex: 1; }
-.contributor__body .button { margin-top: auto; }
+
+/* Prose rhythm and type measured on the original's privacy policy, which
+   scales slightly differently from the home page. */
+.prose { font-size: 17.0128px; }
+.prose p  { margin: 0 0 16px; line-height: 1.5; }
+.prose h2, .prose h3 {
+  font-size: 23.0896px; line-height: 1.361; font-weight: 500; margin: 32px 0;
+}
+.prose .lead { font-size: 21.064px; line-height: 1.5; font-weight: 400; margin: 16px 0; }
+.prose ul { padding-left: 1.2em; margin: 0 0 16px; }
+.prose li { margin-bottom: .4em; }
+.prose a  { color: inherit; }
+.prose em { font-style: italic; }
+@media (min-width: 768px) {
+  .prose { font-size: calc(16px + 0.12vw); }
+  .prose h2, .prose h3 { font-size: calc(16px + 0.84vw); }
+  .prose .lead { font-size: calc(16px + 0.6vw); }
+}
+
+/* Contributors: three cards, media first, each sized to its own content. */
+.contributor-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.contributor { display: flex; flex-direction: column; padding-inline: 7px; }
+.contributor__logo img { width: 50%; margin-inline: auto; }
+.contributor__title { font-size: 22px; line-height: 1.316; margin-top: 28px; }
+.contributor__body { margin-top: 14px; font-size: 16px; line-height: 1.5; }
+.contributor__body > * + * { margin-top: 1em; }
+.contributor__cta { margin-top: 24px; }
 @media (min-width: 768px) {
   .contributor-list { grid-template-columns: repeat(3, 1fr); }
+  .contributor { padding-inline: 8px; }
+  .contributor__title { font-size: calc(16px + 0.72vw); margin-top: 34px; }
+  .contributor__body { margin-top: 16px; }
 }
 
-.contact-grid { display: grid; gap: 3rem; }
-@media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 5vw; } }
-.address { font-style: normal; line-height: 1.885; margin-top: 14px; }
+/* Contact */
+.contact { padding-top: 288px; padding-bottom: 95px; }
+.contact__grid { display: grid; gap: 3rem; }
+.contact__title { font-size: var(--fs-h2); line-height: 1.316; margin-bottom: 1rem; }
+.contact__lede { font-size: var(--fs-h1); line-height: 1.378; margin-bottom: 24px; }
+.contact__social { display: flex; gap: 1rem; margin-top: 24px; }
+.contact__social a { display: inline-flex; width: 22px; height: 22px; }
+.contact__social svg { width: 100%; height: 100%; fill: currentColor; }
+.address { font-style: normal; line-height: 1.5; }
+@media (min-width: 768px) {
+  .contact__grid { grid-template-columns: 534px 1fr; gap: 119px; }
+  .contact { padding-top: 288px; padding-bottom: 95px; }
+}
+
+/* Privacy: the original puts the title in the left columns and the whole
+   policy in the right ones on desktop; stacked on mobile. */
+.privacy { padding-top: 273px; padding-bottom: 60px; }
+.privacy__title { font-size: var(--fs-h2); line-height: 1.316; margin: 0 0 28px; }
+.privacy__title, .privacy__prose { padding-inline: var(--gutter); }
+@media (min-width: 768px) {
+  .privacy {
+    padding-top: 288px; padding-bottom: 80px;
+    --grid-gutter: calc(5vw - 7px);
+    --cell-max-width: calc((var(--max-width) - 7px * 23) / 24);
+    display: grid; column-gap: 7px;
+    grid-template-columns:
+      minmax(var(--grid-gutter), 1fr)
+      repeat(24, minmax(0, var(--cell-max-width)))
+      minmax(var(--grid-gutter), 1fr);
+    max-width: var(--max-width); margin-inline: auto;
+    align-items: start;
+  }
+  /* line numbers from _design/GRID.md */
+  .privacy__title { grid-column: 5 / 13; grid-row: 1; padding-inline: 0; }
+  .privacy__prose { grid-column: 13 / 24; grid-row: 1; padding-inline: 0; }
+}
 
 /* --- Footer -------------------------------------------------------------
    The original insets the footer less than the page gutter: content runs
@@ -295,6 +348,7 @@ p:last-child { margin-bottom: 0; }
 .footer a { color: inherit; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 .footer__grid { display: grid; gap: 2.5rem; max-width: none; padding-inline: 0; }
+.footer .address { line-height: 1.885; margin-top: 14px; }
 .footer__logo { display: block; }
 .footer__logo img { width: 100%; }
 .footer__nav ul { list-style: none; margin: 0 0 1.1rem; padding: 0; display: grid; gap: .35rem; }

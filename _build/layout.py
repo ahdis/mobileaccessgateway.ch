@@ -51,12 +51,16 @@ def header(active=""):
   </header>"""
 
 
-def footer():
-    social = "\n".join(
-        f'          <a href="{href}" aria-label="{label}"'
+def social_row(indent="          "):
+    return "\n".join(
+        f'{indent}<a href="{href}" aria-label="{label}"'
         + (' target="_blank" rel="noopener"' if href.startswith("http") else "")
         + f'><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="{d}"/></svg></a>'
         for label, href, d in SOCIAL)
+
+
+def footer():
+    social = social_row()
     return f"""  <footer class="footer">
     <div class="wrap footer__grid">
       <div>

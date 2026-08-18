@@ -3,7 +3,7 @@
 Output is plain HTML that GitHub Pages serves as-is (no Jekyll, no Actions)."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from layout import page
+from layout import page, social_row
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -152,16 +152,17 @@ cards = "\n".join(f"""      <li class="contributor">
         <div class="contributor__logo">
           <img src="/assets/img/{img}.webp" width="800" height="433" alt="{name}" loading="lazy">
         </div>
-        <div class="contributor__body">
-          <h3>{name}</h3>
-          {body}
+        <h2 class="contributor__title">{name}</h2>
+        <div class="contributor__body">{body}</div>
+        <div class="contributor__cta">
           <a class="button button--olive" href="{href}" target="_blank" rel="noopener">{name}</a>
         </div>
       </li>""" for img, name, href, body in CONTRIBUTORS)
 
-contributors_body = f"""  <section class="section section--white page">
+contributors_body = f"""  <section class="section section--inverse page">
     <div class="wrap">
-      <h1 class="page__title">Contributors</h1>
+      <p class="page__title">Contributors</p>
+      <h1 class="visually-hidden">Contributors</h1>
       <ul class="contributor-list">
 {cards}
       </ul>
@@ -169,29 +170,34 @@ contributors_body = f"""  <section class="section section--white page">
   </section>"""
 
 # --------------------------------------------------------------------------
-contact_body = """  <section class="section section--white page">
-    <div class="wrap contact-grid">
-      <div>
-        <h1 class="page__title">Contact us.</h1>
+contact_body = f"""  <section class="section section--bright contact">
+    <div class="wrap contact__grid">
+      <div class="contact__left">
+        <h1 class="contact__title">Contact us.</h1>
         <address class="address">
           ahdis ag<br>c/o Impact Hub Z&uuml;rich<br>Sihlquai 131<br>8005 Z&uuml;rich<br>Switzerland
         </address>
+        <div class="contact__social">
+{social_row()}
+        </div>
       </div>
-      <div>
-        <h2>ahdis provides you with support &ndash; get in touch!</h2>
-        <p style="margin-top:1.2rem">Write to us at
-          <a href="mailto:info@ahdis.ch">info@ahdis.ch</a> and we will come back to you.</p>
-        <p><a class="button button--olive" href="mailto:info@ahdis.ch">Email info@ahdis.ch</a></p>
+      <div class="contact__right">
+        <p class="contact__lede">Write to us and we will come back to you.</p>
+        <p><a class="button" href="mailto:info@ahdis.ch">info@ahdis.ch</a></p>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--band">
+    <div class="wrap">
+      <h2 class="band__title">ahdis provides you with support - get in touch!</h2>
     </div>
   </section>"""
 
-privacy_body = f"""  <section class="section section--white page">
-    <div class="wrap">
-      <h1 class="page__title">Privacy Policy</h1>
-      <div class="prose">
+privacy_body = f"""  <section class="section section--bright privacy">
+    <h1 class="privacy__title">Privacy Policy</h1>
+    <div class="prose privacy__prose">
 {read('privacy-policy.html')}
-      </div>
     </div>
   </section>"""
 
