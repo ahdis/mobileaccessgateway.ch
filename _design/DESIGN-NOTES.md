@@ -78,6 +78,27 @@ Squarespace CDN covering latin / latin-ext / devanagari — archived under
 `_reference/squarespace/fonts/`. The rebuild only needs latin + latin-ext at
 400/500; devanagari is unused by any page content.
 
+## Things that were not visible from the markup
+
+Found only by measuring or sampling the rendered page:
+
+- **The header sits on a solid chartreuse band** painted by
+  `div.header-background-solid`; every element's `background-color` reports
+  `rgba(0,0,0,0)`. The mobile menu overlay uses the same chartreuse.
+- **All four content images are circle-clipped** by an SVG `clipPath`
+  (`objectBoundingBox` circle). The image files themselves are opaque squares
+  with a pale background baked in, so without the clip they render as pale
+  squares. `border-radius: 50%` is equivalent.
+- **The menu button is Squarespace's "plus" icon** (`header-menu-icon-plus`),
+  which rotates into a cross — not a hamburger.
+- **The CDN content-negotiates**: the same URL returns WebP or PNG depending on
+  `Accept` and edge cache state, which made the first archive non-deterministic.
+  `archive.sh` now sends an explicit `Accept` so it stores true originals.
+- **The header logos are referenced protocol-relative** (`//images...`), and
+  three distinct asset UUIDs share one filename, so assets are keyed by UUID.
+- **Hero copy is `<h1>`** in the original, so it renders at h1 size with 32px
+  paragraph margins and a 17px inset inside its 671px column.
+
 ## Decisions taken
 
 - **Contact form** → replaced by a `mailto:info@ahdis.ch` button plus the postal
@@ -85,5 +106,13 @@ Squarespace CDN covering latin / latin-ext / devanagari — archived under
 - **Analytics** → GA4 `G-29ZBMN1C2G` retained, which means a consent banner must
   be rebuilt (Squarespace was providing it). Banner colors from `custom.css`:
   bg `#445c71`, accept-hover `#dae16c`, deny-hover `#db7c33`, `border-radius: 5px`.
-- **Privacy policy** → ported verbatim; mismatches with the new hosting to be
-  listed separately for review, not silently edited.
+- **Privacy policy** → ported verbatim; mismatches with the new hosting are
+  listed in [PRIVACY-REVIEW.md](PRIVACY-REVIEW.md), not silently edited.
+
+## Verification
+
+`tools/compare.mjs` reports full-page heights against the live site; at the time
+of writing home and privacy match to 1px on desktop, contributors is within 1%,
+and all four are within 1% on mobile except contact, which is intentionally
+shorter without the form. `tools/measure.mjs` compares landmark geometry —
+on the home page every x and width matches exactly at both breakpoints.

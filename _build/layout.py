@@ -64,7 +64,7 @@ def footer():
     return f"""  <footer class="footer">
     <div class="wrap footer__grid">
       <div>
-        <a class="footer__logo" href="https://ahdis.ch/en/" target="_blank" rel="noopener">
+        <a class="footer__logo" href="https://www.ahdis.ch/en/home" target="_blank" rel="noopener">
           <img src="/assets/img/ahdis-logo.webp" width="600" height="176" alt="ahdis ag">
         </a>
         <address class="address">
@@ -101,7 +101,9 @@ def footer():
   </div>"""
 
 
-def page(title, description, body, active="", canonical="/"):
+def page(title, description, body, active="", canonical="/", indexable=True):
+    canon = (f'\n<link rel="canonical" href="https://www.mobileaccessgateway.ch{canonical}">'
+             if indexable else '\n<meta name="robots" content="noindex">')
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +111,7 @@ def page(title, description, body, active="", canonical="/"):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
-<link rel="canonical" href="https://www.mobileaccessgateway.ch{canonical}">
+{canon}
 <meta property="og:site_name" content="Mobile Access Gateway">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">

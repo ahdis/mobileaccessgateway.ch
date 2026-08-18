@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Working material, not part of the site
+Disallow: /_reference/
+Disallow: /_design/
+Disallow: /_build/
+
+Sitemap: https://www.mobileaccessgateway.ch/sitemap.xml

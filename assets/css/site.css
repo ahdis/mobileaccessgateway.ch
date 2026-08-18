@@ -341,6 +341,11 @@ p:last-child { margin-bottom: 0; }
   .privacy__prose { grid-column: 13 / 24; grid-row: 1; padding-inline: 0; }
 }
 
+/* --- 404 ---------------------------------------------------------------- */
+.page404 { padding: 288px 0 120px; }
+.page404__title { font-size: var(--fs-h2); line-height: 1.316; margin-bottom: 1rem; }
+.page404__text { font-size: var(--fs-h1); line-height: 1.378; max-width: 34rem; margin-bottom: 28px; }
+
 /* --- Footer -------------------------------------------------------------
    The original insets the footer less than the page gutter: content runs
    55px..1386px at 1440 wide, and 6px..383px at 390. ---------------------- */
