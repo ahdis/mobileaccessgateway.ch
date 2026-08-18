@@ -1,0 +1,222 @@
+{
+  "index": [
+    {
+      "id": "6b782dea323b937f5398",
+      "mobile": "1/2/3/10",
+      "desktop": "2/10/4/18",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "In A Nutshell"
+    },
+    {
+      "id": "yui_3_17_2_1_1676386896622_3147",
+      "mobile": "4/2/10/10",
+      "desktop": "6/9/16/13",
+      "type": "website.components.imageFluid",
+      "images": [
+        "MAG_230214_Icons_3Fragen_Homeseite_einzeln_openSource.png"
+      ],
+      "links": [],
+      "text": ""
+    },
+    {
+      "id": "a586f7ed74db474067b2",
+      "mobile": "11/2/13/10",
+      "desktop": "5/14/7/22",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "Why open-source software?"
+    },
+    {
+      "id": "210b0b9e3781e201c3bb",
+      "mobile": "13/2/29/10",
+      "desktop": "7/14/17/23",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "\u201cOpen source\u201d refers to any kind of software that is available under an open source licence. It allows anyone using the code under that licence to use and modify the source code to meet their own specific needs. Open source software offers: visibility into source code for full transparency, open sta"
+    },
+    {
+      "id": "2106ea06ef0be54a3b96",
+      "mobile": "30/2/32/10",
+      "desktop": "17/14/19/18",
+      "type": "website.components.button",
+      "images": [],
+      "links": [
+        "/contributors"
+      ],
+      "text": "See contributors"
+    },
+    {
+      "id": "yui_3_17_2_1_1675932120595_166035",
+      "mobile": "33/2/34/10",
+      "desktop": "19/5/20/23",
+      "type": "website.components.horizontalrule",
+      "images": [],
+      "links": [],
+      "text": ""
+    },
+    {
+      "id": "df0533a8d475de233e75",
+      "mobile": "35/2/41/10",
+      "desktop": "21/15/33/19",
+      "type": "website.components.imageFluid",
+      "images": [
+        "MAG_230214_Icons_3Fragen_Homeseite_einzeln_EPR.png"
+      ],
+      "links": [],
+      "text": ""
+    },
+    {
+      "id": "b511d91f4286d1744c41",
+      "mobile": "42/2/44/10",
+      "desktop": "20/5/22/13",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "What is the Swiss EPR?"
+    },
+    {
+      "id": "2b555b9f7b515603252c",
+      "mobile": "44/2/64/10",
+      "desktop": "22/5/32/14",
+      "type": "website.components.html",
+      "images": [],
+      "links": [
+        "https://www.patientrecord.ch/"
+      ],
+      "text": "The Swiss Electronic Patient Record (EPR) is where your personal health-related documents can be collected together. With the EPR, you have control over your documents and you can enable your healthcare professionals to access treatment-relevant information regardless of time and place. This is a pa"
+    },
+    {
+      "id": "90b7d4cc6e088e1df781",
+      "mobile": "64/2/66/10",
+      "desktop": "32/5/34/9",
+      "type": "website.components.button",
+      "images": [],
+      "links": [
+        "https://www.patientrecord.ch/ "
+      ],
+      "text": "Find out more"
+    },
+    {
+      "id": "05ec6c2d85f15922a6d8",
+      "mobile": "67/2/68/10",
+      "desktop": "34/5/35/23",
+      "type": "website.components.horizontalrule",
+      "images": [],
+      "links": [],
+      "text": ""
+    },
+    {
+      "id": "203a9f27f67757193046",
+      "mobile": "69/2/75/10",
+      "desktop": "37/9/53/13",
+      "type": "website.components.imageFluid",
+      "images": [
+        "MAG_230214_Icons_3Fragen_Homeseite_einzeln_mHealth.png"
+      ],
+      "links": [],
+      "text": ""
+    },
+    {
+      "id": "b6ff340f578de7e2ad64",
+      "mobile": "76/2/79/10",
+      "desktop": "36/14/38/22",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "How does mobile health work?"
+    },
+    {
+      "id": "99db9fa3f3840c6d2bbf",
+      "mobile": "79/2/102/10",
+      "desktop": "38/14/51/23",
+      "type": "website.components.html",
+      "images": [],
+      "links": [
+        "https://fhir.ch/ig/ch-epr-fhir/index.html",
+        "https://www.e-health-suisse.ch/technik/technische-interoperabilitaet/mhealth-beim-epd",
+        "https://www.ihe.net/"
+      ],
+      "text": "Mobile health (mHealth) is the organizational and technical requirement to send, store and access health-related data via the EPR, with mobile applications and devices. According to Swiss regulations and legislation, EPR providers must support certain technical profiles defined by the IHE (Integrati"
+    },
+    {
+      "id": "4b65d0bc51b2b3731976",
+      "mobile": "102/2/104/10",
+      "desktop": "51/14/53/18",
+      "type": "website.components.button",
+      "images": [],
+      "links": [
+        "/contact"
+      ],
+      "text": "Contact us"
+    }
+  ],
+  "contact": [
+    {
+      "id": "f6494d0d7b3ae98507e9",
+      "mobile": "1/2/7/10",
+      "desktop": "1/2/7/12",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "Contact us. ahdis ag / c/o Impact Hub Z\u00fcrich / Sihlquai 131 / 8005 Z\u00fcrich / Switzerland"
+    },
+    {
+      "id": "d8c85f6c0ad4c7c13a91",
+      "mobile": "1/2/13/10",
+      "desktop": "2/3/4/25",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "ahdis provides you with support - get in touch!"
+    },
+    {
+      "id": "40abe269cea359698c92",
+      "mobile": "7/2/9/10",
+      "desktop": "7/2/8/12",
+      "type": "website.components.socialLinks",
+      "images": [],
+      "links": [
+        "/universal/svg/social-accounts.svg#email-icon",
+        "/universal/svg/social-accounts.svg#email-mask",
+        "/universal/svg/social-accounts.svg#github-unauth-icon",
+        "/universal/svg/social-accounts.svg#github-unauth-mask",
+        "/universal/svg/social-accounts.svg#linkedin-unauth-icon",
+        "/universal/svg/social-accounts.svg#linkedin-unauth-mask"
+      ],
+      "text": ""
+    },
+    {
+      "id": "f65857e7a9f138954525",
+      "mobile": "9/2/23/10",
+      "desktop": "1/14/12/26",
+      "type": "website.components.form",
+      "images": [],
+      "links": [],
+      "text": ""
+    }
+  ],
+  "privacy-policy": [
+    {
+      "id": "759a32ebd72149ad5e3c",
+      "mobile": "2/2/4/10",
+      "desktop": "1/5/3/13",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "Privacy Policy"
+    },
+    {
+      "id": "fe48c7d45e7e04dc6d15",
+      "mobile": "4/2/52/10",
+      "desktop": "1/13/96/24",
+      "type": "website.components.html",
+      "images": [],
+      "links": [],
+      "text": "Data protection and data security are important to Mobile Access Gateway (MAG, we, us). This Privacy Policy describes how we collect and process your personal data when you visit websites operated by MAG (Website) or access and use our products or services. 1. Collection and processing of personal d"
+    }
+  ]
+}

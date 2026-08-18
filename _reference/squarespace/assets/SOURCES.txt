@@ -16,6 +16,7 @@ https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/asse
 https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/da0c3c0d-458f-46e2-9c64-bac004d4e8c1/latin.woff2
 https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e364ec28-4783-442b-b46f-59d33a99dd2c/devanagari.woff2
 https://file.squarespace-cdn.com/content/v2/namespaces/fonts/libraries/sqsp/assets/e5441b3f-475c-4dd0-815e-d1493a6eef24/latin-ext.woff2
+https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/276baf53-18d4-4f92-8e1e-30ff7078eb9e/AHD_MAG_230214_Logo_Auswahl_L5_Vogel_weiss_Schrift_groesser_NEU.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/3703a39c-6ad2-4af6-afc7-f820901ac1ec/AHD_230228_relaunch_Logo_1b_weiss_links.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/51180956-e559-40e8-b314-ed5c6275fabc/MAG_230214_Icons_3Fragen_Homeseite_einzeln_EPR.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/6e62c366-ec3f-4cef-97ca-08995914df3a/HCI_Solutions_2024_logo.png
@@ -23,6 +24,7 @@ https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/7d3dd8a2-
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/88725273-1f1d-44a5-8483-a127791205a0/MAG_all+icons_1080x1080px_moving_gif_230216_1.gif
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/8e145c1f-123e-465d-a246-ade29c21986e/AHD_MAG_230214_Logo_Auswahl_L5_Vogel_weiss_Schrift_groesser_NEU.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/90e6b508-ed93-4e5f-a2c5-ddea9e990312/favicon.ico
+https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/b890e3c3-4f96-496d-8cb1-9be1a844d9d5/AHD_MAG_230214_Logo_Auswahl_L5_Vogel_weiss_Schrift_groesser_NEU.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/c3e0cc40-b88c-4611-9099-fa5f27168044/MAG_230214_Icons_3Fragen_Homeseite_einzeln_mHealth.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/e883def5-db7f-475b-89a3-aa42b4df8207/AHD_Logo_ahd_3.png
 https://images.squarespace-cdn.com/content/v1/63d2950cdd31af2a18b6b27e/e963cf4b-61d1-48d2-9b05-f7cd2e71dc06/AHD_Logo_BHF-2.png
