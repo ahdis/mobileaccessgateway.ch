@@ -49,12 +49,16 @@ Every page was measured against the live Squarespace site with Playwright at
 |---|---|---|
 | home | 0.0% | +0.3% |
 | contributors | −1.0% | +0.7% |
-| privacy-policy | 0.0% | +0.5% |
-| contact | −19.8% | −23.5% |
+| privacy-policy | +3.4%\* | +4.1%\* |
+| contact | −19.4% | −25.5% |
 
 On the home page every landmark's x position and width matches exactly at both
-breakpoints. Contact is deliberately shorter: the Squarespace form was replaced
-by a `mailto:` link, so the right-hand column no longer holds a 532px form.
+breakpoints.
+
+Two pages differ on purpose, so their numbers are not fidelity measures:
+**contact** is shorter because the Squarespace form was replaced by a `mailto:`
+link, and **privacy-policy** (\*) is longer because its text was amended — see
+below.
 
 Re-run the comparison at any time (needs the local server running):
 
@@ -94,16 +98,19 @@ image first on mobile.
 - **Google Analytics retained** (`G-29ZBMN1C2G`), so a consent banner was
   rebuilt: Consent Mode starts `denied`, GA loads only after Accept, and the
   choice is remembered. Verified by `_design/tools/test-consent.mjs`.
-- **Privacy policy ported verbatim.** Statements that no longer match the site
-  are listed in [`_design/PRIVACY-REVIEW.md`](_design/PRIVACY-REVIEW.md) for
-  review — nothing was reworded.
-- **Known broken link, carried over:** the "Mobile health (mHealth)" link on the
-  home page points at
-  `e-health-suisse.ch/technik/technische-interoperabilitaet/mhealth-beim-epd`,
-  which returns 404 (it is broken on the live site too). Left as-is because the
-  intended replacement is a content decision. The footer's `ahdis.ch/en/` link
-  was also broken and *was* fixed, to the `www.ahdis.ch/en/home` URL already
-  used by the other ahdis links.
+- **Privacy policy amended.** Ported verbatim first, then updated so it matches
+  how the site actually works on GitHub Pages — most importantly section 6,
+  which claimed all processing happens in Switzerland. Every change is recorded
+  with before/after in
+  [`_design/PRIVACY-REVIEW.md`](_design/PRIVACY-REVIEW.md), along with one item
+  (the newsletter paragraphs) left open for a decision.
+  **This is legal text and should be reviewed before the cutover.**
+- **Broken links fixed.** The home page's "Mobile health (mHealth)" link now
+  points at ahdis's mHealth-Konzept PDF; it previously went to an
+  e-health-suisse.ch URL that 404s (and still 404s on the live site). The
+  footer's `ahdis.ch/en/` link, which 301s to a 404, now uses
+  `www.ahdis.ch/en/home` like the other ahdis links. No external link on the
+  site is broken.
 
 ## Cutover
 

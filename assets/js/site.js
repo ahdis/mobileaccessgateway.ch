@@ -94,9 +94,22 @@
     if (deny) deny.addEventListener('click', function () { decide('declined'); });
   }
 
-  // Lets the privacy policy offer a way back to the choice.
-  window.magResetConsent = function () {
+  // The privacy policy states the decision can be changed at any time, so it
+  // links here to bring the banner back.
+  function reopen() {
     try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-    if (banner) banner.setAttribute('data-visible', 'true');
-  };
+    if (banner) {
+      banner.setAttribute('data-visible', 'true');
+      var first = banner.querySelector('button');
+      if (first) first.focus();
+    }
+  }
+  window.magResetConsent = reopen;
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll('.js-consent-reopen'),
+    function (el) {
+      el.addEventListener('click', function (e) { e.preventDefault(); reopen(); });
+    }
+  );
 })();

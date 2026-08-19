@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const b=await chromium.launch(); const ctx=await b.newContext(); const p=await ctx.newPage();
+await p.goto('http://localhost:8080/privacy-policy/',{waitUntil:'networkidle'});
+await p.waitForTimeout(600);
+await p.click('.consent__deny'); await p.waitForTimeout(400);
+console.log('  after Decline, banner visible:', await p.isVisible('.consent'));
+await p.click('.js-consent-reopen'); await p.waitForTimeout(400);
+console.log('  after clicking the policy link, banner visible:', await p.isVisible('.consent'));
+const hits=[]; p.on('request',r=>{if(/googletagmanager|google-analytics/.test(r.url()))hits.push(1);});
+await p.click('.consent__accept'); await p.waitForTimeout(1200);
+console.log('  then Accept -> GA requests:', hits.length);
+await b.close();

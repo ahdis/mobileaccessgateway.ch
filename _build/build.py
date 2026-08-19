@@ -42,7 +42,7 @@ FEATURES = [
      "Find out more", "https://www.patientrecord.ch/"),
     ("image-left",  "icon-mhealth", "Mobile health",
      "How does mobile health work?",
-     '<p><a href="https://www.e-health-suisse.ch/technik/technische-interoperabilitaet/mhealth-beim-epd" '
+     '<p><a href="https://www.ahdis.ch/s/190508_mHealthKonzept_V1_0_final_d.pdf" '
      'target="_blank" rel="noopener">Mobile health (mHealth)</a> is the organizational and '
      'technical requirement to send, store and access health-related data via the EPR, with '
      'mobile applications and devices. According to Swiss regulations and legislation, EPR '
