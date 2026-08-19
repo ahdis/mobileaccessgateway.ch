@@ -1,13 +1,14 @@
 # Privacy policy — what was changed, and the one item left open
 
-The policy was first ported **verbatim** from the Squarespace site. The edits
-below were then made on request, to bring it in line with how the site actually
-works after the move to GitHub Pages.
+The policy was first ported **verbatim** from the Squarespace site. The seven
+edits below were then made on request, to bring it in line with how the site
+actually works after the move to GitHub Pages. Nothing is left open.
 
 **This is legal text. Please have it reviewed before the cutover.** Every change
 is listed here with the exact before/after so a reviewer does not have to diff
-the HTML. The wording is deliberately conservative — nothing was restructured,
-and no section was added or removed.
+the HTML. The wording is deliberately conservative: no section was restructured,
+none was added, and the only removals are statements that describe things the
+site does not do.
 
 ---
 
@@ -62,7 +63,24 @@ browser."
 "change that decision at any time" is a working link that brings the consent
 banner back — so the sentence is literally true, not aspirational.
 
-### 5. Section 7 — named the hosting provider
+### 5. Section 1 — removed the newsletter paragraphs
+
+MAG has no newsletter (confirmed), and the site has no signup — this text was
+inaccurate before the migration too. Removed in full: the
+*"Use and optimization of our newsletter"* sub-heading and the two paragraphs
+following it, covering signup data, newsletter analytics and the unsubscribe
+link. No occurrence of "newsletter" remains in the policy.
+
+Section 1 now ends on the web analytics paragraph and runs straight into
+section 2. Nothing else in section 1 was touched.
+
+Note that section 3 still carries the bullet *"Sending you information about new
+developments at MAG or new services or offers (you may at any time opt-out…)"*.
+That is a general statement about contacting you, not a newsletter signup, so it
+was left in place — flagging it only so the removal is not assumed to be wider
+than it was.
+
+### 6. Section 7 — named the hosting provider
 
 **Before:** "● External service providers,"
 **After:** "● External service providers, including the provider hosting this
@@ -74,28 +92,6 @@ and
 member state."
 **After:** "…or in an EU or EEA member state; our hosting provider is based in
 the United States."
-
----
-
-## Left unchanged — needs your decision
-
-### The newsletter paragraphs (section 1)
-
-> "When you sign up for our newsletter, we collect the information you provide
-> to us… please use the unsubscribe link at the end of the newsletter."
-
-There is no newsletter signup anywhere on this site, and there was none on the
-Squarespace version either — this text appears to have been inaccurate before
-the migration too.
-
-**I deliberately did not delete it.** Describing collection that does not happen
-is over-disclosure, which is harmless; deleting it when ahdis does run a
-newsletter through some other channel would be under-disclosure, which is the
-worse error. I cannot verify which is the case from the site alone.
-
-If MAG has no newsletter, say so and it is a one-line deletion of the
-`<em>Use and optimization of our newsletter</em>` paragraph and the two
-paragraphs following it.
 
 ---
 

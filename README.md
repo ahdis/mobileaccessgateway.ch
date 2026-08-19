@@ -102,9 +102,9 @@ image first on mobile.
   how the site actually works on GitHub Pages — most importantly section 6,
   which claimed all processing happens in Switzerland. Every change is recorded
   with before/after in
-  [`_design/PRIVACY-REVIEW.md`](_design/PRIVACY-REVIEW.md), along with one item
-  (the newsletter paragraphs) left open for a decision.
-  **This is legal text and should be reviewed before the cutover.**
+  [`_design/PRIVACY-REVIEW.md`](_design/PRIVACY-REVIEW.md). The newsletter
+  paragraphs were removed as well — MAG has no newsletter and the site never had
+  a signup. **This is legal text and should be reviewed before the cutover.**
 - **Broken links fixed.** The home page's "Mobile health (mHealth)" link now
   points at ahdis's mHealth-Konzept PDF; it previously went to an
   e-health-suisse.ch URL that 404s (and still 404s on the live site). The
