@@ -71,6 +71,13 @@ node _design/tools/linkcheck.mjs      # internal links and assets
 node _design/tools/test-consent.mjs   # verifies analytics stays off until Accept
 ```
 
+## Converting another Squarespace site
+
+[`prompt.md`](prompt.md) is a prompt for a future session doing the same job on
+another site — the reconnaissance checklist, the traps that cost time here, the
+reusable tooling, and reconnaissance already done on the next target
+(`www.matchbox.health`).
+
 ## The archive
 
 `_reference/archive.sh` re-downloads the original site: all four pages, every
